@@ -1,0 +1,23 @@
+
+// _image-grid.scss
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: $spacing-lg 0;
+    gap: 10px;
+
+    .image-item {
+        flex: 1 1 calc(50% - 10px);
+        box-sizing: border-box;
+   
+        border-radius: $border-radius-lg;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

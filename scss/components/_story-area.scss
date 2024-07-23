@@ -13,7 +13,7 @@
     background-color: #fff;
     border-radius: 8px;
   
-
+    overflow: visible;
     
   .story {
     position: relative;
@@ -21,14 +21,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: $spacing-sm;
+    gap: $spacing-xs;
     cursor: pointer;
+  
 
     img {
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        overflow: hidden;
+
         flex-shrink: 0;
         border: $color-secondary $border-style-solid 2px;
   
@@ -62,7 +63,7 @@
         font-weight: bold;
         font-size: 12px;
         text-align: center;
-        padding: 2px 0;
+       
     
 
       }

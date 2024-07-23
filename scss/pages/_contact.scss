@@ -1,0 +1,95 @@
+// _contact.scss
+
+// Variables
+$contact-bg: $color-light;
+$contact-padding: $spacing-md;
+$contact-form-bg: $color-white;
+$contact-form-border: 1px solid $border-color-light;
+$contact-form-border-radius: $border-radius-md;
+$contact-form-shadow: $box-shadow-sm;
+
+// Contact Page Styles
+.contact {
+  background-color: $contact-bg;
+  padding: $contact-padding;
+
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: $spacing-lg;
+
+    .info-item {
+      flex: 1;
+      margin-right: $spacing-md;
+      padding: $spacing-md;
+      background-color: $contact-form-bg;
+      border: $contact-form-border;
+      border-radius: $contact-form-border-radius;
+      box-shadow: $contact-form-shadow;
+
+      h3 {
+        font-size: $font-size-lg;
+        margin-bottom: $spacing-sm;
+      }
+
+      p {
+        font-size: $font-size-md;
+        margin-bottom: $spacing-md;
+        color: $color-muted;
+      }
+    }
+  }
+
+  .contact-form {
+    background-color: $contact-form-bg;
+    padding: $spacing-md;
+    border: $contact-form-border;
+    border-radius: $contact-form-border-radius;
+    box-shadow: $contact-form-shadow;
+
+    h2 {
+      font-size: $font-size-xl;
+      margin-bottom: $spacing-md;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .form-group {
+        margin-bottom: $spacing-md;
+
+        label {
+          display: block;
+          font-size: $font-size-md;
+          margin-bottom: $spacing-sm;
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          padding: $spacing-sm;
+          border: 1px solid $border-color-light;
+          border-radius: $border-radius-md;
+          font-size: $font-size-md;
+          line-height: 1.6;
+        }
+
+        textarea {
+          resize: vertical;
+          min-height: 150px;
+        }
+      }
+
+      .form-actions {
+        display: flex;
+        justify-content: flex-end;
+
+        .btn-primary {
+          margin-top: $spacing-md;
+        }
+      }
+    }
+  }
+}

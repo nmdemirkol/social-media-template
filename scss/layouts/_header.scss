@@ -1,0 +1,97 @@
+// _header.scss
+
+// Variables
+$header-bg: $color-primary;
+$header-height: 60px;
+$header-text-color: $color-white;
+$header-padding: $spacing-md;
+
+// Base Header Styles
+.header {
+  background-color: $header-bg;
+  color: $header-text-color;
+  height: $header-height;
+  padding: $header-padding;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: $box-shadow-sm;
+  position: relative;
+
+  .header-logo {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $header-text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: lighten($header-text-color, 10%);
+    }
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    
+    ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-left: $spacing-md;
+
+        a {
+          color: $header-text-color;
+          text-decoration: none;
+          font-size: $font-size-md;
+          padding: $spacing-sm;
+          display: block;
+          transition: color $transition-base;
+
+          &:hover,
+          &:focus {
+            color: lighten($header-text-color, 10%);
+          }
+        }
+      }
+    }
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+
+    .search-bar {
+      border: 1px solid $border-color-light;
+      border-radius: $border-radius-md;
+      padding: $spacing-xs $spacing-sm;
+      font-size: $font-size-md;
+      margin-right: $spacing-md;
+    }
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+
+      .user-name {
+        margin-right: $spacing-sm;
+        font-size: $font-size-md;
+      }
+
+      .user-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: $color-gray-300;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

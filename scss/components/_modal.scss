@@ -1,0 +1,85 @@
+// _modal.scss
+
+// Variables
+$modal-border-radius: $border-radius-md;
+$modal-overlay-bg: rgba($color-black, 0.5);
+$modal-transition: $transition-base;
+
+// Base Modal Styles
+.modal {
+  display: none; // Hidden by default
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $modal-overlay-bg;
+  transition: opacity $modal-transition;
+  z-index: $zindex-modal;
+
+  &.show {
+    display: block;
+    opacity: 1;
+  }
+
+  .modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 1.75rem auto;
+    max-width: 500px;
+  }
+
+  .modal-content {
+    background-color: $color-white;
+    border: 1px solid $border-color-light;
+    border-radius: $modal-border-radius;
+    box-shadow: $box-shadow-lg;
+    position: relative;
+    padding: $spacing-md;
+    margin: $spacing-md;
+    transition: transform $modal-transition;
+  }
+
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-color-light;
+    padding: $spacing-sm $spacing-md;
+
+    .modal-title {
+      margin: 0;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-bold;
+    }
+
+    .close {
+      font-size: $font-size-xl;
+      font-weight: $font-weight-bold;
+      color: $color-dark;
+      cursor: pointer;
+      background: none;
+      border: none;
+
+      &:hover {
+        color: $color-danger;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: $spacing-md;
+  }
+
+  .modal-footer {
+    padding: $spacing-sm $spacing-md;
+    border-top: 1px solid $border-color-light;
+    display: flex;
+    justify-content: flex-end;
+
+    .btn {
+      margin-left: $spacing-sm;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+
+// _content.scss
+
+.content{
+    flex: 7; 
+    flex-wrap: wrap; /* İçerikler sığmazsa yeni satıra geçer */
+    overflow: auto; 
+    background-color: $color-white;
+    padding: $spacing-xl $spacing-xl $spacing-xl 0;
+}

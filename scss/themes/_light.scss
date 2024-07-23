@@ -1,0 +1,48 @@
+// _light.scss
+
+// Base Colors
+$color-primary: #007bff;
+$color-secondary: #6c757d;
+$color-success: #28a745;
+$color-info: #17a2b8;
+$color-warning: #ffc107;
+$color-danger: #dc3545;
+$color-light: #f8f9fa;
+$color-dark: #343a40;
+$color-white: #ffffff;
+$color-muted: #6c757d;
+
+// Borders and Shadows
+$border-color-light: #dee2e6;
+$border-color-dark: #ced4da;
+$box-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.075);
+$box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$box-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.2);
+
+// Backgrounds
+$background-body: $color-light;
+$background-card: $color-white;
+$background-header: $color-primary;
+$background-footer: $color-secondary;
+
+// Text Colors
+$text-color-primary: $color-dark;
+$text-color-secondary: $color-muted;
+$text-color-inverse: $color-white;
+
+// Link Colors
+$link-color: $color-primary;
+$link-color-hover: darken($color-primary, 10%);
+
+// Button Colors
+$button-bg-primary: $color-primary;
+$button-bg-secondary: $color-secondary;
+$button-bg-success: $color-success;
+$button-bg-info: $color-info;
+$button-bg-warning: $color-warning;
+$button-bg-danger: $color-danger;
+
+// Additional Styles
+$link-hover-color: darken($color-primary, 10%);
+$navbar-bg: $color-light;
+$navbar-text-color: $color-dark;

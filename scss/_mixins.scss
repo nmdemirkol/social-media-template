@@ -1,0 +1,122 @@
+// Flexbox Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @mixin flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  @mixin flex-space-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  // Responsive Mixins
+  @mixin respond-to($breakpoint) {
+    @if $breakpoint == xs {
+      @media (max-width: 480px) { @content; }
+    } @else if $breakpoint == sm {
+      @media (max-width: 768px) { @content; }
+    } @else if $breakpoint == md {
+      @media (max-width: 992px) { @content; }
+    } @else if $breakpoint == lg {
+      @media (max-width: 1200px) { @content; }
+    } @else if $breakpoint == xl {
+      @media (max-width: 1440px) { @content; }
+    }
+  }
+  
+  // Text Mixins
+  @mixin text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  @mixin text-shadow($x, $y, $blur, $color) {
+    text-shadow: $x $y $blur $color;
+  }
+  
+  @mixin text-gradient($start-color, $end-color) {
+    background: -webkit-linear-gradient($start-color, $end-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  // Button Mixins
+  @mixin button($background, $color) {
+    background-color: $background;
+    color: $color;
+    padding: $button-padding-y $button-padding-x;
+    border: none;
+    border-radius: $border-radius-md;
+    cursor: pointer;
+    transition: background-color $transition-base;
+  
+    &:hover {
+      background-color: darken($background, 10%);
+    }
+  }
+  
+  // Border Radius Mixins
+  @mixin border-radius($radius) {
+    border-radius: $radius;
+  }
+  
+  // Box Shadow Mixins
+  @mixin box-shadow($x, $y, $blur, $color) {
+    box-shadow: $x $y $blur $color;
+  }
+  
+  // Gradient Background Mixins
+  @mixin gradient-bg($start-color, $end-color) {
+    background: linear-gradient(45deg, $start-color, $end-color);
+  }
+  
+  // Animation Mixins
+  @mixin animation($name, $duration, $timing-function, $delay) {
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-timing-function: $timing-function;
+    animation-delay: $delay;
+  }
+  
+  @mixin keyframes($name) {
+    @keyframes #{$name} {
+      @content;
+    }
+  }
+  
+  // Utility Mixins
+  @mixin clearfix {
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  
+  @mixin visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  // Transition Mixins
+  @mixin transition($properties...) {
+    transition: $properties $transition-base;
+  }

@@ -1,0 +1,99 @@
+// _about.scss
+
+// Variables
+$about-bg: $color-light;
+$about-padding: $spacing-md;
+$about-text-color: $color-dark;
+$about-image-width: 50%;
+$about-image-margin: $spacing-md;
+
+// About Page Styles
+.about {
+  background-color: $about-bg;
+  padding: $about-padding;
+
+  .about-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .about-text {
+      flex: 1;
+      color: $about-text-color;
+      padding-right: $about-image-margin;
+
+      h1 {
+        font-size: $font-size-xxl;
+        margin-bottom: $spacing-sm;
+      }
+
+      p {
+        font-size: $font-size-md;
+        margin-bottom: $spacing-md;
+        line-height: 1.6;
+      }
+    }
+
+    .about-image {
+      flex: 1;
+      max-width: $about-image-width;
+      margin-left: $about-image-margin;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: $border-radius-md;
+      }
+    }
+  }
+
+  .about-team {
+    margin-top: $spacing-lg;
+
+    .section-title {
+      font-size: $font-size-xl;
+      font-weight: $font-weight-bold;
+      margin-bottom: $spacing-md;
+      text-align: center;
+    }
+
+    .team-members {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .team-member {
+        flex: 1 1 calc(33.333% - $spacing-md * 2);
+        max-width: calc(33.333% - $spacing-md * 2);
+        text-align: center;
+        margin-bottom: $spacing-md;
+
+        .member-photo {
+          width: 100%;
+          height: 200px;
+          overflow: hidden;
+          border-radius: $border-radius-md;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .member-info {
+          margin-top: $spacing-sm;
+
+          h3 {
+            font-size: $font-size-md;
+            margin-bottom: $spacing-xs;
+          }
+
+          p {
+            font-size: $font-size-sm;
+            color: $color-muted;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+
+// _line.scss
+
+
+.line-container {
+    margin: $spacing-lg $spacing-sm; /* Üstten ve alttan boşluk */
+  }
+  
+  .custom-line {
+    border-top: 2px solid $color-gray-300; /* Çizginin kalınlığı ve rengi */
+    width: 100%; /* Çizginin genişliği */
+    height: 0; /* Çizginin yüksekliği */
+ //   margin: 20px 0; /* Üstten ve alttan boşluk */
+  }

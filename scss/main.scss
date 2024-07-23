@@ -1,0 +1,43 @@
+// main.scss
+
+// Variables
+@import 'variables';
+
+// Mixins
+@import 'mixins';
+
+// Base Styles
+@import 'base';
+
+// Components
+@import 'components/line';
+@import 'components/button';
+@import 'components/card';
+@import 'components/modal';
+@import 'components/story-area';
+
+// Layouts
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/sidebar';
+@import 'layouts/content';
+@import 'layouts/rightbar';
+
+// Pages
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/contact';
+
+// Themes
+@import 'themes/light';
+@import 'themes/dark';
+
+// Icon
+@import 'icon';
+
+
+body{
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+}

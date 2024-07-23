@@ -1,0 +1,166 @@
+// _sidebar.scss
+
+
+
+
+$sidebar-bg: $color-primary;
+$sidebar-width: 90px;
+$sidebar-padding-horizontal: $spacing-lg;
+$sidebar-padding-vertical: $spacing-xl;
+$sidebar-border-right: 1px solid $border-color-light;
+
+
+.sidebar {
+
+  background-color: $sidebar-bg;
+  width: $sidebar-width;
+  padding: $sidebar-padding-vertical $sidebar-padding-horizontal;
+
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .sidebar-logo {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+    text-align: center;
+    margin-bottom: $spacing-md;
+    text-decoration: none;
+
+
+    img {
+      @include flex-row;
+      width: 100%;
+
+    }
+
+
+    &:hover {
+      color: darken($color-primary, 10%);
+    }
+  }
+
+
+  .sidebar-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .sidebar-menu-item {
+      padding: $spacing-sm;
+
+      color: $color-gray-700;
+      cursor: pointer;
+
+      i{
+        font-size: $font-size-icon-md;
+      }
+
+      &:hover {
+        color: darken($color-white, 10%);
+      }
+    }
+
+  }
+
+}
+
+
+
+.sidebar-right {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  background-color: $color-primary;
+  height: 100vh;
+
+
+  .sidebar-right-front {
+    width: $spacing-xxl;
+    background-color: $color-white;
+    height: 100vh;
+    border-radius: $border-radius-xl 0 0 0;
+  }
+}
+
+
+
+
+
+
+
+
+/*
+// Variables
+$sidebar-bg: $color-gray-100;
+$sidebar-width: 250px;
+$sidebar-padding: $spacing-md;
+$sidebar-border-right: 1px solid $border-color-light;
+
+// Base Sidebar Styles
+.sidebar {
+  background-color: $sidebar-bg;
+  width: $sidebar-width;
+  padding: $sidebar-padding;
+  border-right: $sidebar-border-right;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  box-shadow: $box-shadow-sm;
+
+  .sidebar-logo {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+    text-align: center;
+    margin-bottom: $spacing-md;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($color-primary, 10%);
+    }
+  }
+
+  .sidebar-nav {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-bottom: $spacing-sm;
+
+        a {
+          display: block;
+          padding: $spacing-sm;
+          color: $color-dark;
+          text-decoration: none;
+          font-size: $font-size-md;
+          transition: background-color $transition-base, color $transition-base;
+
+          &:hover,
+          &:focus {
+            background-color: $color-gray-200;
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar-footer {
+    position: absolute;
+    bottom: $spacing-md;
+    width: calc(100% - $sidebar-padding * 2);
+    text-align: center;
+    font-size: $font-size-xs;
+    color: $color-muted;
+  }
+}*/

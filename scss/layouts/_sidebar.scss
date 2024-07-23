@@ -11,7 +11,7 @@ $sidebar-border-right: 1px solid $border-color-light;
 
 
 .sidebar {
-
+position: fixed;
   background-color: $sidebar-bg;
   width: $sidebar-width;
   padding: $sidebar-padding-vertical $sidebar-padding-horizontal;
@@ -62,6 +62,10 @@ $sidebar-border-right: 1px solid $border-color-light;
       }
 
       &:hover {
+        color: darken($color-secondary, 10%);
+      }
+
+      .active {
         color: darken($color-white, 10%);
       }
     }
@@ -78,7 +82,7 @@ $sidebar-border-right: 1px solid $border-color-light;
   justify-content: stretch;
   background-color: $color-primary;
   height: 100vh;
-
+  margin-left: $sidebar-width;
 
   .sidebar-right-front {
     width: $spacing-xxl;
